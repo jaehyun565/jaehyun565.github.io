@@ -3,137 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blessing Christian School - 학교 소개</title>
+    <title>Blessing Christian School</title>
+    <!-- Tailwind CSS CDN 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* 기본 스타일 */
+        /* 사용자 정의 스타일 */
         body {
-            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f7f6;
-            color: #333;
+            font-family: "Inter", sans-serif;
+            background-color: #f0f4f8; /* 배경색 통일 */
+            scroll-behavior: smooth; /* 부드러운 스크롤 적용 */
         }
-
-        /* 컨테이너 스타일 (README 느낌을 위한 중앙 정렬 및 최대 너비 설정) */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+        /* 섹션 패딩 (네비게이션바 높이 고려) */
+        .content-section {
+            padding-top: 5rem; 
+            padding-bottom: 5rem;
         }
-
-        /* 헤더 스타일 */
-        header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #0056b3; /* 학교 색상 예시 */
-            margin-bottom: 30px;
-        }
-
-        header h1 {
-            color: #0056b3;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        /* 섹션 스타일 */
-        section {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-left: 5px solid #007bff;
-            border-radius: 4px;
-        }
-
-        section h2 {
-            color: #007bff;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-
-        /* 리스트 스타일 */
-        ul {
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        /* 푸터 스타일 */
-        footer {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #777;
-            font-size: 0.9em;
-            margin-top: 30px;
+        /* 이미지 필터 (텍스트 가독성을 위해 어둡게 처리) */
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* 40% 투명도의 검은색 오버레이 */
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>🌟 Blessing Christian School</h1>
-            <p>하나님의 축복 아래, 꿈을 키우고 세상을 섬기는 인재를 양성합니다.</p>
-        </header>
-        <section id="introduction">
-            <h2>📜 학교 소개 (Introduction)</h2>
-            <p><strong>Blessing Christian School (BCS)</strong>은 기독교 정신을 바탕으로 설립된 학교로, 학생들이 지성, 인성, 영성 모두를 갖춘 전인적인 리더로 성장하도록 돕습니다.</p>
-            <p>성경적 세계관을 교육의 중심에 두고, 창의적이고 주도적인 학습 환경을 제공하여 학생들이 각자의 잠재력을 최대한 발휘할 수 있도록 지원합니다.</p>
-        </section>
+<body class="text-gray-800">
+
+    <!-- 1. Hero Section: 이미지 및 오버레이 탭 -->
+    <header class="relative h-96 md:h-[480px] w-full overflow-hidden shadow-lg">
         
-        <hr>
-
-        <section id="philosophy">
-            <h2>✨ 교육 철학 (Educational Philosophy)</h2>
-            <ul>
-                <li><strong>성경적 세계관 교육:</strong> 모든 학문과 삶의 영역에서 하나님의 말씀을 기준으로 삼는 교육.</li>
-                <li><strong>전인 교육:</strong> 지식 습득뿐만 아니라 영성, 인성, 체력을 균형 있게 발달시키는 교육.</li>
-                <li><strong>섬김의 리더십:</strong> 세상을 변화시키고 이웃을 사랑하며 봉사하는 리더십 함양.</li>
-                <li><strong>창의적 학습 환경:</strong> 토론, 프로젝트, 체험 학습을 통한 주도적인 학습 강조.</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section id="programs">
-            <h2>📚 주요 프로그램 (Key Programs)</h2>
-            <p>BCS는 학생들의 다양한 성장을 위한 특화된 프로그램을 운영하고 있습니다.</p>
-            <ul>
-                <li><strong>큐티 & 채플:</strong> 매일 성경 말씀 묵상과 주간 예배를 통한 영적 성장.</li>
-                <li><strong>글로벌 리더십 프로그램:</strong> 외국어 교육 및 국제 교류를 통한 글로벌 역량 강화.</li>
-                <li><strong>인증 독서 프로그램:</strong> 사고력 및 논리력 향상을 위한 체계적인 독서 지도.</li>
-                <li><strong>봉사 활동 및 선교 트립:</strong> 나눔과 섬김의 실천을 통한 공동체 의식 함양.</li>
-            </ul>
-        </section>
-        
-        <hr>
-
-        <section id="contact">
-            <h2>📍 연락처 및 위치 (Contact & Location)</h2>
-            <p>학교에 대해 더 궁금한 점이 있으시면 언제든지 문의해 주십시오.</p>
-            <ul>
-                <li><strong>주소:</strong> [학교 주소 기입]</li>
-                <li><strong>대표 전화:</strong> 000-0000-0000</li>
-                <li><strong>이메일:</strong> info@blessingcs.org</li>
-                <li><strong>웹사이트:</strong> <a href="#">[공식 웹사이트 링크]</a></li>
-            </ul>
-        </section>
-        
-        <footer>
-            <p>&copy; 2025 Blessing Christian School. All Rights Reserved. | Created with HTML & CSS.</p>
-        </footer>
+        <!-- 배경 이미지 (학교 이미지) -->
+        <!-- Tailwind CSS를 사용하여 커버 및 중앙 정렬, Placeholder 이미지를 사용합니다. -->
+        <div class="bg-cover bg-center h-full" style="background-image: url('https://placehold.co/1920x480/004d99/ffffff?text=Blessing+Christian+School+Campus');">
+            <!-- 이미지 위에 어두운 오버레이 적용 (가독성 향상) -->
+            <div class="image-overlay"></div>
         </div>
+
+        <!-- 학교 이름 (이미지 위에 중앙 배치) -->
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-white p-4 z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-2 text-center drop-shadow-lg">
+                <span class="text-yellow-300">🌟</span> Blessing Christian School
+            </h1>
+            <p class="text-lg md:text-2xl font-light text-center drop-shadow-md">
+                하나님의 축복 아래, 꿈을 키우고 세상을 섬기는 인재를 양성합니다.
+            </p>
+        </div>
+
+        <!-- 오버레이 탭 (가로 4개 버튼) -->
+        <nav class="absolute bottom-0 left-0 right-0 z-20 bg-white/10 backdrop-blur-sm shadow-xl border-t border-white/20">
+            <div class="max-w-7xl mx-auto flex justify-center space-x-0 md:space-x-2 py-3 px-4">
+                <a href="#intro" class="flex-1 text-center py-3 px-3 md:px-6 text-sm md:text-base font-semibold text-white hover:text-yellow-300 transition duration-300 rounded-lg hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                    학교 소개
+                </a>
+                <a href="#philosophy" class="flex-1 text-center py-3 px-3 md:px-6 text-sm md:text-base font-semibold text-white hover:text-yellow-300 transition duration-300 rounded-lg hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                    교육 철학
+                </a>
+                <a href="#programs" class="flex-1 text-center py-3 px-3 md:px-6 text-sm md:text-base font-semibold text-white hover:text-yellow-300 transition duration-300 rounded-lg hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                    주요 프로그램
+                </a>
+                <a href="#contact" class="flex-1 text-center py-3 px-3 md:px-6 text-sm md:text-base font-semibold text-white hover:text-yellow-300 transition duration-300 rounded-lg hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                    연락처 및 위치
+                </a>
+            </div>
+        </nav>
+        
+    </header>
+
+    <!-- 2. Main Content Container -->
+    <main class="max-w-5xl mx-auto bg-white shadow-xl rounded-b-xl">
+        
+        <!-- 학교 소개 섹션 -->
+        <section id="intro" class="content-section p-8 md:p-12">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-600 pb-2 mb-6 text-blue-800">
+                🏫 학교 소개 (School Introduction)
+            </h2>
+            <div class="space-y-4 text-lg">
+                <p><strong>Blessing Christian School (BCS)</strong>은 기독교 정신을 바탕으로 설립된 학교로, 학생들이 지성, 인성, 영성 모두를 갖춘 전인적인 리더로 성장하도록 돕습니다.</p>
+                <p>BCS는 단순히 지식을 전달하는 것을 넘어, 성경적 세계관을 통해 세상을 이해하고 하나님의 영광을 위해 살아가는 법을 가르칩니다. 학생들은 창의적이고 주도적인 학습 환경 속에서 각자의 고유한 재능과 잠재력을 발견하고 발전시킵니다.</p>
+                <div class="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg">
+                    <p class="font-semibold text-yellow-800">우리의 비전: "세상의 빛과 소금으로 세상을 섬기는 글로벌 리더 양성"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 교육 철학 섹션 -->
+        <section id="philosophy" class="content-section bg-gray-50 p-8 md:p-12">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-600 pb-2 mb-6 text-blue-800">
+                ✨ 교육 철학 (Educational Philosophy)
+            </h2>
+            <ul class="space-y-4 text-lg list-disc list-inside">
+                <li class="font-semibold text-blue-700">성경적 세계관 교육</li>
+                <p class="ml-4 text-gray-700">모든 학문과 삶의 영역에서 하나님의 말씀을 진리의 기준으로 삼고 통합적인 관점으로 교육합니다.</p>
+                
+                <li class="font-semibold text-blue-700">전인적 성장 (Holistic Growth)</li>
+                <p class="ml-4 text-gray-700">지적(Head), 영적(Heart), 신체적(Hand) 균형을 갖춘 전인적인 발달을 목표로 합니다.</p>
+                
+                <li class="font-semibold text-blue-700">섬김의 리더십 함양</li>
+                <p class="ml-4 text-gray-700">권위적인 리더가 아닌, 이웃을 사랑하고 봉사하며 세상을 변화시키는 리더십을 가르칩니다.</p>
+                
+                <li class="font-semibold text-blue-700">창의성과 주도 학습</li>
+                <p class="ml-4 text-gray-700">토론, 프로젝트 기반 학습(PBL)을 통해 스스로 문제를 해결하고 창의적으로 사고하는 능력을 배양합니다.</p>
+            </ul>
+        </section>
+
+        <!-- 주요 프로그램 섹션 -->
+        <section id="programs" class="content-section p-8 md:p-12">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-600 pb-2 mb-6 text-blue-800">
+                📚 주요 프로그램 (Key Programs)
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 text-lg">
+                <!-- 프로그램 카드 1 -->
+                <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-bold text-teal-600 mb-2">Morning Devotion & Chapel</h3>
+                    <p>매일 아침 큐티(QT) 시간을 통해 영적 양식을 공급하고, 주 1회 전체 채플을 통해 신앙 공동체의 일원으로 성장합니다.</p>
+                </div>
+                <!-- 프로그램 카드 2 -->
+                <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-bold text-teal-600 mb-2">Global & Language Focus</h3>
+                    <p>원어민 교사와 함께하는 몰입식 외국어 수업과 국제 교류 프로그램을 통해 글로벌 역량을 강화합니다.</p>
+                </div>
+                <!-- 프로그램 카드 3 -->
+                <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-bold text-teal-600 mb-2">Community Service Learning</h3>
+                    <p>학년별 필수 봉사 활동 및 단기 선교 트립을 통해 나눔과 섬김의 가치를 실천하며 사회성을 기릅니다.</p>
+                </div>
+                <!-- 프로그램 카드 4 -->
+                <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-bold text-teal-600 mb-2">STEAM Integration</h3>
+                    <p>과학, 기술, 공학, 예술, 수학을 기독교적 관점으로 통합하여 탐구하는 융합 교육을 실시합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 연락처 및 위치 섹션 -->
+        <section id="contact" class="content-section bg-gray-50 p-8 md:p-12">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-600 pb-2 mb-6 text-blue-800">
+                📍 연락처 및 위치 (Contact & Location)
+            </h2>
+            <div class="space-y-4 text-lg">
+                <p>학교 입학 및 기타 문의 사항에 대해 언제든지 환영합니다.</p>
+                <div class="bg-white p-6 rounded-xl border border-blue-200 shadow-inner">
+                    <ul class="space-y-3">
+                        <li>
+                            <span class="font-semibold text-blue-600">주소:</span> [학교 주소 기입]
+                        </li>
+                        <li>
+                            <span class="font-semibold text-blue-600">대표 전화:</span> <a href="tel:000-0000-0000" class="text-green-500 hover:text-green-700 transition">000-0000-0000</a>
+                        </li>
+                        <li>
+                            <span class="font-semibold text-blue-600">이메일:</span> <a href="mailto:info@blessingcs.org" class="text-green-500 hover:text-green-700 transition">info@blessingcs.org</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 3. Footer -->
+    <footer class="bg-blue-900 text-white py-6 mt-10 shadow-inner">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <p class="text-sm">&copy; 2025 Blessing Christian School. All Rights Reserved.</p>
+            <p class="text-xs mt-1">Inspired by Faith, Built for the Future.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
